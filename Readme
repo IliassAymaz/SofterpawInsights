@@ -1,0 +1,19 @@
+We want to be able to pull data from our search console
+
+and generate insights for some questions
+
+Examples of questions we might want to consider:
+"""
+|- Basic questions to get started with:
+|-- Which posts (-> categories) drove the most impressions in the last X weeks? 
+|-- 
+|
+|- More advanced:
+|-- Which posts were the 'fastest' in terms of ranking up in Google rankings?
+
+
+Afterwards, we want to build an "AI" system, capable of "choosing" and telling us:
+- Which category to choose
+- and/or what should our next article be about 
+
+This implies the existence of a data set
