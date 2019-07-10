@@ -8,12 +8,12 @@ We also want to be able to generate insights for some *key* questions.
 
 ### Examples of questions we might want to consider:
 
-|- Basic questions to get started with:
-|-- Which posts (-> categories) drove the most impressions in the last X weeks? 
-|-- 
-|
-|- More advanced:
-|-- Which posts were the 'fastest' in terms of ranking up in Google?
+- Basic questions to get started with:
+	- Which posts (-> categories) drove the most impressions in the last X weeks? 
+
+
+- More advanced:
+	- Which posts were the 'fastest' in terms of ranking up in Google?
 
 ### And towards a web app, sort of
 
