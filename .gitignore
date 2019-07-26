@@ -4,8 +4,10 @@
 
 
 # venv stuff:
-aux/
+bin/
 include/
+lib/python3.6
+share/python-wheels
 
 
 *.swp
