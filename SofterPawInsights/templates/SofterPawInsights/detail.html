@@ -1,0 +1,6 @@
+<h1>{{ criteria.criteria_text }}</h1>
+<ul>
+{% for choice in criteria.choice_set.all %}
+    <li>{{ choice.choice_text }}</li>
+{% endfor %}
+</ul>

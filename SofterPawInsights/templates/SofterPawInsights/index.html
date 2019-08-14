@@ -1,0 +1,22 @@
+<h1>Welcome to SofterPawInsights!</h1>
+<p>Here, we will be able to identify and predict which content drives us the best results in terms of traffic, CTR, Amazon
+    conversions ... </p>
+<p>Below is a simulated list of how the system would yield the target articles that belong to a specific 
+    research criteria.
+</p>
+{% if latest_criteria_list %}
+    <ul>
+    {% for criteria in latest_criteria_list %}
+        <li><a href= "{% url 'detail' criteria.id %}" >{{ criteria.criteria_text }}</a></li>
+            <ul>
+            {% for article in article_list %}
+                {% if article.criteria == criteria %}
+                <li><a href="/softerpawinsights/{{ criteria.id }}/{{ article.slug }}">{{ article.title }}</a></li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No criterias are available.</p>
+{% endif %}
