@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # SofterpawIntel
 
 This project combines :
@@ -34,4 +33,3 @@ Afterwards, we want to build an "AI" system, capable of "choosing" and telling u
 We can build that as a "web app", full stack, and make it available to front end usage,
 input being which question to select, and output being the predicted 
 category/cluster of keywords to write the next article about.
->>>>>>> ac821e18b2ab1365f3139c2a8a5e201cb2e6b0b9
