@@ -12,8 +12,11 @@ include/
 lib/python3.6
 share/python-wheels
 
+# pycache
+__pycache__/
 
 *.swp
+
 
 >>>>>>> ac821e18b2ab1365f3139c2a8a5e201cb2e6b0b9
 
