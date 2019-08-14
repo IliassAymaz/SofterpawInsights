@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-venv/
-=======
 # vscode
 .vscode/
 *.code-workspace
@@ -15,5 +12,4 @@ share/python-wheels
 
 *.swp
 
->>>>>>> ac821e18b2ab1365f3139c2a8a5e201cb2e6b0b9
 
