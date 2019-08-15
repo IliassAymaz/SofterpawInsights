@@ -6,16 +6,17 @@ This project combines :
 	- Simple data browser
 	- AI insights maker
 - SofterpawSpider (simple crawler)
-=======
-# SofterpawInsights
 
-## Motivation
+
+## SofterpawInsights
+
+### Motivation
 We want to be able to pull data from our search console that is directly linked to our
 affiliate marketing blog.
 
 We also want to be able to generate insights for some *key* questions.
 
-### Examples of questions we might want to consider:
+#### Examples of questions we might want to consider:
 
 - Basic questions to get started with:
 	- Which posts (-> categories) drove the most impressions in the last X weeks? 
@@ -24,7 +25,7 @@ We also want to be able to generate insights for some *key* questions.
 - More advanced:
 	- Which posts were the 'fastest' in terms of ranking up in Google?
 
-### And towards a web app, sort of
+#### And towards a web app, sort of
 
 Afterwards, we want to build an "AI" system, capable of "choosing" and telling us:
 - Which category to choose
@@ -33,3 +34,7 @@ Afterwards, we want to build an "AI" system, capable of "choosing" and telling u
 We can build that as a "web app", full stack, and make it available to front end usage,
 input being which question to select, and output being the predicted 
 category/cluster of keywords to write the next article about.
+
+## SofterpawSpider
+
+We would like to see our own simple web crawler that pulls keywords that we need for our content to rank, using maching learning models. 
