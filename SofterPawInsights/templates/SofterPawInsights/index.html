@@ -11,7 +11,7 @@
             <ul>
             {% for article in article_list %}
                 {% if article.criteria == criteria %}
-                <li><a href="/softerpawinsights/{{ criteria.id }}/{{ article.slug }}">{{ article.title }}</a></li>
+                <li><a href="/softerpawinsights/{{ article.criteria_id }}/{{ article.slug }}">{{ article.title }}</a></li>
                 {% endif %}
             {% endfor %}
             </ul>

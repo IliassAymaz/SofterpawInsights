@@ -1,2 +1,11 @@
-<h1> {{ article.title }} </h1>
-<p> {{ article.slug }}, {{ article.criteria.id }}</p>
+
+
+{% for article in article %}
+    <h1> {{article.title}} </h1>
+{% endfor %}
+
+<p> 
+    Results of the analysis per article will go here. 
+</p>
+
+
