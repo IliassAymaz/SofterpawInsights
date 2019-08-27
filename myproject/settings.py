@@ -25,7 +25,9 @@ SECRET_KEY = 'u378++9pp5lhtoe0%1u+kibqx-h6&(kb*&06jz-e*dw8137#nm'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['http://softerpawinsights.herokuapp.com/']
+ALLOWED_HOSTS = [
+    'http://softerpawinsights.herokuapp.com/',
+    '127.0.0.1']
 
 
 # Application definition
