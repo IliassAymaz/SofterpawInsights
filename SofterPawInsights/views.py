@@ -37,6 +37,7 @@ def index(request):
 
 
 def detail(request, criteria_id):
+	# this will get the actual object
 	criteria = get_object_or_404(Criteria, pk=criteria_id)
 	return render(request, 'SofterPawInsights/detail.html', {'criteria':criteria})
 
@@ -47,8 +48,7 @@ def article(request, slug, criteria_id):
 	# this needs to conform to the html call
 	# article here is different from article in index.html
 
-	# article = get_object_or_404(Article, pk=criteria_id)
-	# article = Article.objects.get(pk = criteria_id)
+	# this will get a *list* of objects!
 	article = Article.objects.filter(criteria__id=criteria_id, slug=slug)
 	print(criteria_id, article)
 	context = {
