@@ -26,7 +26,7 @@ SECRET_KEY = 'u378++9pp5lhtoe0%1u+kibqx-h6&(kb*&06jz-e*dw8137#nm'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'http://softerpawinsights.herokuapp.com/',
+    'softerpawinsights.herokuapp.com',
     '127.0.0.1']
 
 
