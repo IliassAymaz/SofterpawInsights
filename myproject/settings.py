@@ -127,6 +127,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-import dj_database_url 
+'''import dj_database_url 
 prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+DATABASES['default'].update(prod_db)'''
