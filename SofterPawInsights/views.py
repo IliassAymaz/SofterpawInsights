@@ -28,8 +28,8 @@ def index(request):
 
 	# let's make a dirty test
 
-	for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
-		print(p.criteria_id, p.title)
+	'''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
+		print(p.criteria_id, p.title)'''
 
 
 
