@@ -79,6 +79,7 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
+    # this should go in 'local' settings.py
     'default': {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
@@ -96,6 +97,7 @@ DATABASES = {
 
 import dj_database_url
 # this overwrites DATABASES as written above!
+# this should go in 'production' settings.py
 DATABASES['default'] =  dj_database_url.config()
 
 
