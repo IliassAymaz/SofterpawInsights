@@ -1,5 +1,9 @@
 
 
+# local settings
+settings/local.py
+settings/base.py
+
 
 # vscode
 .vscode/
