@@ -35,6 +35,7 @@ ALLOWED_HOSTS = [
 
 INSTALLED_APPS = [
     'SofterPawInsights.apps.SofterpawinsightsConfig',
+    'SofterPawSpider.apps.SofterpawspiderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -59,7 +60,9 @@ ROOT_URLCONF = 'myproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'myproject/templates')
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

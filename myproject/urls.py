@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from myproject import views
 
 
 urlpatterns = [
     # path arguments are : route, view
-    whatever
+    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('softerpawinsights/', include('SofterPawInsights.urls'))
+    path('softerpawinsights/', include('SofterPawInsights.urls')),
+    path('softerpawspider/', include('SofterPawSpider.urls'))
 ]
