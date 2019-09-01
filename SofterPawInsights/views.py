@@ -55,3 +55,4 @@ def article(request, slug, criteria_id):
 		'article' : article,
 	}
 	return render(request, 'SofterPawInsights/article.html', context)
+
