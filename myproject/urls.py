@@ -19,6 +19,7 @@ from django.urls import path, include
 
 urlpatterns = [
     # path arguments are : route, view
+    whatever
     path('admin/', admin.site.urls),
     path('softerpawinsights/', include('SofterPawInsights.urls'))
 ]
