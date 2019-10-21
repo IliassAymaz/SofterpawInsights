@@ -33,3 +33,14 @@ class Article(models.Model):
         self.slug = slugify(self.title)
         super(Article, self).save(*args, **kwargs)
 
+
+class Performance(models.Model):
+    keys = models.CharField(max_length=200, blank=True, null=True)
+    clicks = models.CharField(max_length=200, blank=True, null=True)
+    impressions = models.CharField(max_length=200, blank=True, null=True)
+    ctr = models.CharField(max_length=200, blank=True, null=True)
+    position = models.CharField(max_length=200, blank=True, null=True)
+
+    class Meta:
+        managed = False
+        db_table = 'performance'

@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "https://softerpaw.com/"
+      ],
+      "clicks": 3.0,
+      "impressions": 75.0,
+      "ctr": 0.04,
+      "position": 3.88
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/best-bark-collar-dogs/"
+      ],
+      "clicks": 3.0,
+      "impressions": 1276.0,
+      "ctr": 0.0023510971786833857,
+      "position": 79.94827586206897
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/best-organic-dog-food-small-breeds/"
+      ],
+      "clicks": 2.0,
+      "impressions": 3268.0,
+      "ctr": 0.0006119951040391676,
+      "position": 74.99082007343941
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/about-old/"
+      ],
+      "clicks": 1.0,
+      "impressions": 22.0,
+      "ctr": 0.045454545454545456,
+      "position": 3.0
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/best-dog-food-yorkies/"
+      ],
+      "clicks": 1.0,
+      "impressions": 2552.0,
+      "ctr": 0.00039184952978056425,
+      "position": 83.47884012539186
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/category/training-behavior/"
+      ],
+      "clicks": 1.0,
+      "impressions": 43.0,
+      "ctr": 0.023255813953488372,
+      "position": 9.976744186046512
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/home-old/"
+      ],
+      "clicks": 1.0,
+      "impressions": 20.0,
+      "ctr": 0.05,
+      "position": 7.7
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/stop-dog-pulling-leash/"
+      ],
+      "clicks": 1.0,
+      "impressions": 952.0,
+      "ctr": 0.0010504201680672268,
+      "position": 77.55987394957984
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/about/"
+      ],
+      "clicks": 0.0,
+      "impressions": 56.0,
+      "ctr": 0.0,
+      "position": 2.696428571428571
+    },
+    {
+      "keys": [
+        "https://softerpaw.com/best-carpet-cleaner-pets/"
+      ],
+      "clicks": 0.0,
+      "impressions": 2124.0,
+      "ctr": 0.0,
+      "position": 97.33568738229755
+    }
+  ],
+  "responseAggregationType": "byPage"
+}
