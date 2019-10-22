@@ -85,9 +85,8 @@ def simulation(request):
 
 def database(request):
 	
-	all_items = Performance.objects.all()
+	all_items = Performance.objects.order_by('keys')
 	all_fields = Performance._meta.get_fields()
-	print(all_fields)
 	context = {
 		'all_items' : all_items,
 		'all_fields': all_fields
@@ -98,12 +97,13 @@ def database(request):
 	if request.method == 'POST' and 'run_script' in request.POST:
 
 		# import function to run
-		from .querying.startupUpdate import update
+		from .querying.startupUpdate import Updater
 
 		# call function
-		update() 
+		_Updater = Updater()
+		_Updater.update() 
 
 		# return user to required page
 		return HttpResponseRedirect(reverse('SofterPawInsights:database'))
-		
+
 	return render(request, 'SofterPawInsights/db.html', context)
