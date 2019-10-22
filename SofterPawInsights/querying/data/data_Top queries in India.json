@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "\"best dog food for yorkies\""
+      ],
+      "clicks": 0.0,
+      "impressions": 14.0,
+      "ctr": 0.0,
+      "position": 68.5
+    },
+    {
+      "keys": [
+        "bark and training collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 93.0
+    },
+    {
+      "keys": [
+        "bark collar alternatives"
+      ],
+      "clicks": 0.0,
+      "impressions": 2.0,
+      "ctr": 0.0,
+      "position": 91.5
+    },
+    {
+      "keys": [
+        "bark collar for puppies"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keys": [
+        "best all natural dog food for small breeds"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 92.0
+    },
+    {
+      "keys": [
+        "best anti bark collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 71.0
+    },
+    {
+      "keys": [
+        "best bark collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 9.0,
+      "ctr": 0.0,
+      "position": 75.77777777777777
+    },
+    {
+      "keys": [
+        "best bark collar for dogs"
+      ],
+      "clicks": 0.0,
+      "impressions": 14.0,
+      "ctr": 0.0,
+      "position": 87.92857142857143
+    },
+    {
+      "keys": [
+        "best bark collar for large dogs"
+      ],
+      "clicks": 0.0,
+      "impressions": 2.0,
+      "ctr": 0.0,
+      "position": 67.0
+    },
+    {
+      "keys": [
+        "best bark collar for small dogs"
+      ],
+      "clicks": 0.0,
+      "impressions": 32.0,
+      "ctr": 0.0,
+      "position": 90.0625
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}

@@ -1,0 +1,33 @@
+{% load static %}
+{% load extras %}
+<link rel="stylesheet" type="text/css" href="{% static "SofterPawInsights/style.css" %}">
+
+
+<h1>Check/Update the database</h1>
+
+
+  
+
+
+    <table>
+        <tr>
+            {% for column in all_fields %}
+            <th>{{ column.name }}</th>
+            {% endfor %}
+        </tr>
+        {% for item in all_items %}
+        <tr>
+            {% for column in all_fields %}
+            <td>  {{ item|get_attr:column.name }}  </td>
+            {% endfor %}
+              
+        </tr>
+        {% endfor %}
+
+
+    </table>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="run_script">Update</button>
+    </form>

@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "best carpet cleaners for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 8.0,
+      "ctr": 0.0,
+      "position": 56.75
+    },
+    {
+      "keys": [
+        "best carpet cleaning solution for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 147.0
+    },
+    {
+      "keys": [
+        "best carpet shampoo for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 59.0
+    },
+    {
+      "keys": [
+        "best carpet shampooer for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 3.0,
+      "ctr": 0.0,
+      "position": 49.666666666666664
+    },
+    {
+      "keys": [
+        "best carpet shampooers for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 2.0,
+      "ctr": 0.0,
+      "position": 49.5
+    },
+    {
+      "keys": [
+        "best carpet washer for pets"
+      ],
+      "clicks": 0.0,
+      "impressions": 2.0,
+      "ctr": 0.0,
+      "position": 87.0
+    },
+    {
+      "keys": [
+        "best dog bark collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 67.0
+    },
+    {
+      "keys": [
+        "best dog bark collars"
+      ],
+      "clicks": 0.0,
+      "impressions": 3.0,
+      "ctr": 0.0,
+      "position": 88.66666666666667
+    },
+    {
+      "keys": [
+        "best dog barking collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 44.0
+    },
+    {
+      "keys": [
+        "best dog food for huskies"
+      ],
+      "clicks": 0.0,
+      "impressions": 295.0,
+      "ctr": 0.0,
+      "position": 78.49491525423728
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}

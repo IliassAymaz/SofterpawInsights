@@ -1,0 +1,105 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "fra",
+        "DESKTOP"
+      ],
+      "clicks": 4.0,
+      "impressions": 277.0,
+      "ctr": 0.01444043321299639,
+      "position": 68.16245487364621
+    },
+    {
+      "keys": [
+        "deu",
+        "DESKTOP"
+      ],
+      "clicks": 3.0,
+      "impressions": 180.0,
+      "ctr": 0.016666666666666666,
+      "position": 83.90555555555555
+    },
+    {
+      "keys": [
+        "can",
+        "DESKTOP"
+      ],
+      "clicks": 1.0,
+      "impressions": 212.0,
+      "ctr": 0.0047169811320754715,
+      "position": 84.35377358490567
+    },
+    {
+      "keys": [
+        "nga",
+        "DESKTOP"
+      ],
+      "clicks": 1.0,
+      "impressions": 17.0,
+      "ctr": 0.058823529411764705,
+      "position": 76.17647058823529
+    },
+    {
+      "keys": [
+        "nzl",
+        "DESKTOP"
+      ],
+      "clicks": 1.0,
+      "impressions": 13.0,
+      "ctr": 0.07692307692307693,
+      "position": 71.23076923076923
+    },
+    {
+      "keys": [
+        "phl",
+        "DESKTOP"
+      ],
+      "clicks": 1.0,
+      "impressions": 194.0,
+      "ctr": 0.005154639175257732,
+      "position": 80.64948453608247
+    },
+    {
+      "keys": [
+        "usa",
+        "DESKTOP"
+      ],
+      "clicks": 1.0,
+      "impressions": 2247.0,
+      "ctr": 0.0004450378282153983,
+      "position": 87.85358255451713
+    },
+    {
+      "keys": [
+        "usa",
+        "MOBILE"
+      ],
+      "clicks": 1.0,
+      "impressions": 182.0,
+      "ctr": 0.005494505494505495,
+      "position": 73.51098901098901
+    },
+    {
+      "keys": [
+        "afg",
+        "DESKTOP"
+      ],
+      "clicks": 0.0,
+      "impressions": 5.0,
+      "ctr": 0.0,
+      "position": 67.0
+    },
+    {
+      "keys": [
+        "afg",
+        "MOBILE"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 100.0
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}

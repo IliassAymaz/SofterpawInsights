@@ -6,7 +6,7 @@ from django.shortcuts import get_object_or_404
 
 
 
-from .models import Criteria, Article
+from .models import Criteria, Article, Performance
 
 # Create your views here.
 
@@ -56,3 +56,54 @@ def article(request, slug, criteria_id):
 	}
 	return render(request, 'SofterPawInsights/article.html', context)
 
+def simulation(request):
+	latest_criteria_list = Criteria.objects.order_by('-pub_date')[:4]
+	article_list = Article.objects.all()
+	# article_list = Article.objects.filter(article__criteria = )
+
+	context = {
+			'latest_criteria_list': latest_criteria_list,
+			'article_list' : article_list,
+		}
+
+	# let's create an actual list that contains the articles that should be shown, 
+	# in the exact same order that should be in the index page.
+
+	# I don't know how the fuck .objects.all() 'gets' the objects from the database
+	# so ama do my own selection.
+
+	# let's make a dirty test
+
+	'''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
+		print(p.criteria_id, p.title)'''
+
+
+
+	return render(request, 'SofterPawInsights/simulation.html', context)
+
+
+
+def database(request):
+	
+	all_items = Performance.objects.order_by('keys')
+	all_fields = Performance._meta.get_fields()
+	context = {
+		'all_items' : all_items,
+		'all_fields': all_fields
+	}
+
+	from django.http import HttpResponseRedirect
+	from django.urls import reverse
+	if request.method == 'POST' and 'run_script' in request.POST:
+
+		# import function to run
+		from .querying.startupUpdate import Updater
+
+		# call function
+		_Updater = Updater()
+		_Updater.update() 
+
+		# return user to required page
+		return HttpResponseRedirect(reverse('SofterPawInsights:database'))
+
+	return render(request, 'SofterPawInsights/db.html', context)

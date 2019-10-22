@@ -1,0 +1,95 @@
+{
+  "rows": [
+    {
+      "keys": [
+        "\"best dog food for yorkies\""
+      ],
+      "clicks": 0.0,
+      "impressions": 102.0,
+      "ctr": 0.0,
+      "position": 67.96078431372548
+    },
+    {
+      "keys": [
+        "\"organic dog food\""
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 36.0
+    },
+    {
+      "keys": [
+        "alaskan husky food"
+      ],
+      "clicks": 0.0,
+      "impressions": 3.0,
+      "ctr": 0.0,
+      "position": 64.0
+    },
+    {
+      "keys": [
+        "amazon pet carpet cleaner"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 73.0
+    },
+    {
+      "keys": [
+        "bark and training collar"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 93.0
+    },
+    {
+      "keys": [
+        "bark collar alternatives"
+      ],
+      "clicks": 0.0,
+      "impressions": 29.0,
+      "ctr": 0.0,
+      "position": 80.24137931034483
+    },
+    {
+      "keys": [
+        "bark collar for puppies"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 79.0
+    },
+    {
+      "keys": [
+        "bark collar on dog"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 98.0
+    },
+    {
+      "keys": [
+        "bark collar yorkie"
+      ],
+      "clicks": 0.0,
+      "impressions": 1.0,
+      "ctr": 0.0,
+      "position": 92.0
+    },
+    {
+      "keys": [
+        "bark collars for yorkies"
+      ],
+      "clicks": 0.0,
+      "impressions": 7.0,
+      "ctr": 0.0,
+      "position": 94.42857142857143
+    }
+  ],
+  "responseAggregationType": "byProperty"
+}
