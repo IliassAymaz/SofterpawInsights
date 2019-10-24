@@ -8,6 +8,15 @@
       "impressions": 89.0,
       "ctr": 0.0,
       "position": 83.03370786516854
+    },
+    {
+      "keys": [
+        "2019-10-21"
+      ],
+      "clicks": 0.0,
+      "impressions": 74.0,
+      "ctr": 0.0,
+      "position": 87.60810810810811
     }
   ],
   "responseAggregationType": "byProperty"

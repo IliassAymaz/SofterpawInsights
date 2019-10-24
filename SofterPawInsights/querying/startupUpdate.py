@@ -12,7 +12,7 @@ class Updater:
 		# get entries up to the first date we have on the local database
 		sysstring ="python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
 					'2019-01-18', 
-					datetime.strftime(datetime.strptime(result[0][0], "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d")) 
+					datetime.strftime(datetime.strptime(str(result[0][0]), "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d")) 
 		os.system(sysstring)
 
 	def handle_database_foot(self, last_local_date):
