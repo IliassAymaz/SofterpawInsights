@@ -4,6 +4,7 @@ import os
 from datetime import date, datetime, timedelta
 today = date.today() 
 
+
 class Updater:
 	def __init__(self):
 		pass
@@ -12,7 +13,8 @@ class Updater:
 		# get entries up to the first date we have on the local database
 		sysstring ="python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
 					'2019-01-18', 
-					datetime.strftime(datetime.strptime(str(result[0][0]), "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d")) 
+					datetime.strftime(datetime.strptime(str(result[0][0]), "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d"))
+		print(os.getcwd())
 		os.system(sysstring)
 
 	def handle_database_foot(self, last_local_date):
@@ -71,6 +73,7 @@ class Updater:
 				cursor.execute(sqlGetLastEntry)
 				connection.commit()
 				result = cursor.fetchall()
+				print(result)
 				try :
 					last_local_date = result[0][0]
 				except IndexError:

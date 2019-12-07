@@ -98,10 +98,7 @@ DATABASES = {
     }
 }
 
-import dj_database_url
-# this overwrites DATABASES as written above!
-# this should go in 'production' settings.py
-DATABASES['default'] =  dj_database_url.config()
+
 
 
 # Password validation

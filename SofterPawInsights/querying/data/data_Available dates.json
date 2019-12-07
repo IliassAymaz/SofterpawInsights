@@ -2,21 +2,174 @@
   "rows": [
     {
       "keys": [
-        "2019-10-20"
+        "2019-10-22"
       ],
       "clicks": 0.0,
-      "impressions": 89.0,
+      "impressions": 83.0,
       "ctr": 0.0,
-      "position": 83.03370786516854
+      "position": 84.03614457831326
     },
     {
       "keys": [
-        "2019-10-21"
+        "2019-10-23"
       ],
       "clicks": 0.0,
-      "impressions": 74.0,
+      "impressions": 75.0,
       "ctr": 0.0,
-      "position": 87.60810810810811
+      "position": 83.36
+    },
+    {
+      "keys": [
+        "2019-10-24"
+      ],
+      "clicks": 0.0,
+      "impressions": 59.0,
+      "ctr": 0.0,
+      "position": 88.88135593220339
+    },
+    {
+      "keys": [
+        "2019-10-25"
+      ],
+      "clicks": 0.0,
+      "impressions": 54.0,
+      "ctr": 0.0,
+      "position": 88.75925925925925
+    },
+    {
+      "keys": [
+        "2019-10-26"
+      ],
+      "clicks": 0.0,
+      "impressions": 56.0,
+      "ctr": 0.0,
+      "position": 91.67857142857143
+    },
+    {
+      "keys": [
+        "2019-10-27"
+      ],
+      "clicks": 0.0,
+      "impressions": 60.0,
+      "ctr": 0.0,
+      "position": 91.96666666666667
+    },
+    {
+      "keys": [
+        "2019-10-28"
+      ],
+      "clicks": 0.0,
+      "impressions": 50.0,
+      "ctr": 0.0,
+      "position": 91.32
+    },
+    {
+      "keys": [
+        "2019-10-29"
+      ],
+      "clicks": 0.0,
+      "impressions": 63.0,
+      "ctr": 0.0,
+      "position": 85.01587301587301
+    },
+    {
+      "keys": [
+        "2019-10-30"
+      ],
+      "clicks": 0.0,
+      "impressions": 62.0,
+      "ctr": 0.0,
+      "position": 84.62903225806451
+    },
+    {
+      "keys": [
+        "2019-10-31"
+      ],
+      "clicks": 0.0,
+      "impressions": 48.0,
+      "ctr": 0.0,
+      "position": 86.89583333333333
+    },
+    {
+      "keys": [
+        "2019-11-01"
+      ],
+      "clicks": 0.0,
+      "impressions": 57.0,
+      "ctr": 0.0,
+      "position": 86.19298245614036
+    },
+    {
+      "keys": [
+        "2019-11-02"
+      ],
+      "clicks": 0.0,
+      "impressions": 67.0,
+      "ctr": 0.0,
+      "position": 85.17910447761194
+    },
+    {
+      "keys": [
+        "2019-11-03"
+      ],
+      "clicks": 0.0,
+      "impressions": 58.0,
+      "ctr": 0.0,
+      "position": 82.53448275862068
+    },
+    {
+      "keys": [
+        "2019-11-04"
+      ],
+      "clicks": 0.0,
+      "impressions": 57.0,
+      "ctr": 0.0,
+      "position": 85.57894736842105
+    },
+    {
+      "keys": [
+        "2019-11-05"
+      ],
+      "clicks": 0.0,
+      "impressions": 65.0,
+      "ctr": 0.0,
+      "position": 90.35384615384615
+    },
+    {
+      "keys": [
+        "2019-11-06"
+      ],
+      "clicks": 0.0,
+      "impressions": 59.0,
+      "ctr": 0.0,
+      "position": 81.37288135593221
+    },
+    {
+      "keys": [
+        "2019-11-07"
+      ],
+      "clicks": 0.0,
+      "impressions": 72.0,
+      "ctr": 0.0,
+      "position": 86.18055555555556
+    },
+    {
+      "keys": [
+        "2019-11-08"
+      ],
+      "clicks": 0.0,
+      "impressions": 64.0,
+      "ctr": 0.0,
+      "position": 82.75
+    },
+    {
+      "keys": [
+        "2019-11-09"
+      ],
+      "clicks": 0.0,
+      "impressions": 57.0,
+      "ctr": 0.0,
+      "position": 89.71929824561404
     }
   ],
   "responseAggregationType": "byProperty"
