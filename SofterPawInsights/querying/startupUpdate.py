@@ -2,6 +2,7 @@ import psycopg2
 from .jsontosql import *
 import os
 from datetime import date, datetime, timedelta
+import traceback
 today = date.today() 
 
 
@@ -13,7 +14,7 @@ class Updater:
 		# get entries up to the first date we have on the local database
 		sysstring ="python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
 					'2019-01-18', 
-					datetime.strftime(datetime.strptime(str(result[0][0]), "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d"))
+					datetime.strftime(datetime.strptime(str(result[0][1]), "%Y-%m-%d") - timedelta(days=1), "%Y-%m-%d"))
 		print(os.getcwd())
 		os.system(sysstring)
 
@@ -39,6 +40,7 @@ class Updater:
 
 	def update(self):
 		try:
+			# This is my database, what about future users database?
 			connection = psycopg2.connect(
 					user = "postgres",
 					host = "127.0.0.1",
@@ -75,32 +77,21 @@ class Updater:
 				result = cursor.fetchall()
 				print(result)
 				try :
-					last_local_date = result[0][0]
+					last_local_date = result[0][1]
 				except IndexError:
 					last_local_date = ''
-				# check first entry
-				sqlGetFirstEntry = "select * from performance order by keys asc limit 1"
-				cursor.execute(sqlGetFirstEntry)
-				connection.commit()
-				result2 = cursor.fetchall()
+
 
 				
 				
-				if len(result2) != 0:
-					if '2019-01-18' not in result2[0]:
-						self.handle_database_head(result2)
-						# execute query
-						sqlQuery, _ = self.execute_query()
 
-						cursor.execute(sqlQuery)
-						connection.commit()
 				else:
 					# populate everything
 					sysstring = "python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
-					'2019-01-18', 
+					'2019-01-18',
 					today.strftime("%Y-%m-%d"))
 					os.system(sysstring)
-		
+
 					sqlQuery, _ = self.execute_query()
 					cursor.execute(sqlQuery)
 					connection.commit()
@@ -121,8 +112,9 @@ class Updater:
 					print("The table is already up-to-date.")
 
 			except (Exception, psycopg2.Error) as queryerror:
-				print("Could not create table. \n", queryerror)
-
+				# print("Could not create table. \n", type(queryerror), ': ', queryerror)
+				print('Could not create table.')
+				print(traceback.format_exc())
 
 		except (Exception, psycopg2.Error) as error:
 			print("Error while connecting to the database.", "\n", error)
