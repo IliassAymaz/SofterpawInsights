@@ -53,26 +53,27 @@ argparser.add_argument('-l', '--last_entry', required=False, action='store_false
 
 arguments = argparser.parse_args()
 
-def main(argv):
-  service, flags = sample_tools.init(
-      argv, 'webmasters', 'v3', __doc__, __file__, parents=[argparser],
-      scope='https://www.googleapis.com/auth/webmasters.readonly')
 
-  # First run a query to learn which dates we have data for. You should always
-  # check which days in a date range have data before running your main query.
-  # This query shows data for the entire range, grouped and sorted by day,
-  # descending; any days without data will be missing from the results.
-  request = {
-      'startDate': flags.start_date,
-      'endDate': flags.end_date,
-      'dimensions': ['date']
-  }
-  response = execute_request(service, flags.property_uri, request)
-  print_table(response, 'Available dates')
+def main(argv):
+    service, flags = sample_tools.init(
+        argv, 'webmasters', 'v3', __doc__, __file__, parents=[argparser],
+        scope='https://www.googleapis.com/auth/webmasters.readonly')
+
+    # First run a query to learn which dates we have data for. You should always
+    # check which days in a date range have data before running your main query.
+    # This query shows data for the entire range, grouped and sorted by day,
+    # descending; any days without data will be missing from the results.
+    request = {
+        'startDate': flags.start_date,
+        'endDate': flags.end_date,
+        'dimensions': ['date']
+    }
+    response = execute_request(service, flags.property_uri, request)
+    print_table(response, 'Available dates')
 
 
 def execute_request(service, property_uri, request):
-  """Executes a searchAnalytics.query request.
+    """Executes a searchAnalytics.query request.
 
   Args:
     service: The webmasters service to use when executing the query.
@@ -82,12 +83,12 @@ def execute_request(service, property_uri, request):
   Returns:
     An array of response rows.
   """
-  return service.searchanalytics().query(
-      siteUrl=property_uri, body=request).execute()
+    return service.searchanalytics().query(
+        siteUrl=property_uri, body=request).execute()
 
 
 def print_table(response, title):
-  """Prints out a response table.
+    """Prints out a response table.
 
   Each row contains key(s), clicks, impressions, CTR, and average position.
 
@@ -95,35 +96,34 @@ def print_table(response, title):
     response: The server response to be printed as a table.
     title: The title of the table.
   """
-  print('\n --' + title + ':')
-  
-  if 'rows' not in response:
-    print('Empty response')
-    return
+    print('\n --' + title + ':')
 
-  rows = response['rows']
-  row_format = '{:<20}' + '{:>20}' * 4
-  print(row_format.format('Keys', 'Clicks', 'Impressions', 'CTR', 'Position'))
-  
-  '''if not arguments.last_element:
-    list_of_keys = []'''
-  for row in rows:
-    keys = ''
-    
-    # Keys are returned only if one or more dimensions are requested.
-    if 'keys' in row:
-      keys = u','.join(row['keys']).encode('utf-8').decode()
-    print(row_format.format(
-        keys, row['clicks'], row['impressions'], row['ctr'], row['position']))
+    if 'rows' not in response:
+        print('Empty response')
+        return
+
+    rows = response['rows']
+    row_format = '{:<20}' + '{:>20}' * 4
+    print(row_format.format('Keys', 'Clicks', 'Impressions', 'CTR', 'Position'))
+
     '''if not arguments.last_element:
+    list_of_keys = []'''
+    for row in rows:
+        keys = ''
+
+        # Keys are returned only if one or more dimensions are requested.
+        if 'keys' in row:
+            keys = u','.join(row['keys']).encode('utf-8').decode()
+        print(row_format.format(
+            keys, row['clicks'], row['impressions'], row['ctr'], row['position']))
+        '''if not arguments.last_element:
       list_of_keys.append(keys)
       return list_of_keys[-1]'''
-  
-  import json
-  with open('./SofterPawInsights/querying/data/data_{}.json'.format(title), 'w') as f:
-    json.dump(response, f, indent=2)
-  
+
+    import json
+    with open('./SofterPawInsights/querying/data/data_{}.json'.format(title), 'w') as f:
+        json.dump(response, f, indent=2)
 
 
 if __name__ == '__main__':
-  main(sys.argv)
+    main(sys.argv)
