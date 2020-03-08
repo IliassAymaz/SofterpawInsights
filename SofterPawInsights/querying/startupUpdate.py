@@ -7,7 +7,7 @@ import traceback
 today = date.today()
 
 DATABASE_URL = os.environ['DATABASE_URL']
-connection = psycopg2.connect(DATABASE_URL, sslmode='require'
+connection = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 class Updater:
     def __init__(self):
