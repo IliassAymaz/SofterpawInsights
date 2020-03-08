@@ -6,6 +6,8 @@ import traceback
 
 today = date.today()
 
+DATABASE_URL = os.environ['DATABASE_URL']
+connection = psycopg2.connect(DATABASE_URL, sslmode='require'
 
 class Updater:
     def __init__(self):
@@ -41,13 +43,6 @@ class Updater:
     def update(self):
         try:
             # This is my database, what about future users database?
-            connection = psycopg2.connect(
-                user="postgres",
-                host="127.0.0.1",
-                port="5432",
-                password="1234",
-                database="softerpawinsights"
-            )
             cursor = connection.cursor()
             # print database parameters
             print(connection.get_dsn_parameters(), "\n")
