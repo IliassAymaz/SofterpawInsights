@@ -2,6 +2,7 @@
   "rows": [
     {
       "keys": [
+<<<<<<< HEAD
         "2019-01-18"
       ],
       "clicks": 0.0,
@@ -2496,10 +2497,14 @@
     {
       "keys": [
         "2019-10-22"
+=======
+        "2020-01-30"
+>>>>>>> fe6ae2c5a8e9ffd2675950377a681dc561299322
       ],
       "clicks": 0.0,
-      "impressions": 83.0,
+      "impressions": 98.0,
       "ctr": 0.0,
+<<<<<<< HEAD
       "position": 84.03614457831326
     },
     {
@@ -3716,6 +3721,27 @@
       "impressions": 67.0,
       "ctr": 0.0,
       "position": 84.29850746268657
+=======
+      "position": 79.39795918367346
+    },
+    {
+      "keys": [
+        "2020-01-31"
+      ],
+      "clicks": 0.0,
+      "impressions": 68.0,
+      "ctr": 0.0,
+      "position": 83.16176470588235
+    },
+    {
+      "keys": [
+        "2020-02-01"
+      ],
+      "clicks": 1.0,
+      "impressions": 74.0,
+      "ctr": 0.013513513513513514,
+      "position": 81.52702702702703
+>>>>>>> fe6ae2c5a8e9ffd2675950377a681dc561299322
     }
   ],
   "responseAggregationType": "byProperty"

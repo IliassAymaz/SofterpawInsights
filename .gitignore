@@ -23,6 +23,11 @@ __pycache__/
 
 *.swp
 
+# idea
+.idea/
 
 # devnotes
 devnotes
+
+# client
+SofterPawInsights/querying/client_secrets.json
