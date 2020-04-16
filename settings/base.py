@@ -28,6 +28,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'softerpawintel.herokuapp.com',
+    'www.softerpawintel.me',
     '127.0.0.1']
 
 
