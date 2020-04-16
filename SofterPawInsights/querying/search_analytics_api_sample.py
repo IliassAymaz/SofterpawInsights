@@ -69,7 +69,9 @@ def main(argv):
         'dimensions': ['date']
     }
     response = execute_request(service, flags.property_uri, request)
-    print_table(response, 'Available dates')
+
+    # don't print, for log purposes
+    # print_table(response, 'Available dates')
 
 
 def execute_request(service, property_uri, request):
