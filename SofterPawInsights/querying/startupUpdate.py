@@ -44,6 +44,12 @@ class Updater:
         try:
             DATABASE_URL = os.environ['DATABASE_URL']
             connection = psycopg2.connect(DATABASE_URL, sslmode='require')
+            '''connection = psycopg2.connect(user='postgres',
+                                          password='1234',
+                                          database='softerpawinsights',
+                                          port='5432',
+                                          host='localhost')
+            '''
             # This is my database, what about future users database?
             cursor = connection.cursor()
             # This is my database, what about future users database?
