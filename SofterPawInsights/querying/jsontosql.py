@@ -99,6 +99,7 @@ WHERE {3}=\'{4}\'
 AND (
     SELECT {3} FROM {0} 
     WHERE {3} = \'{4}\'
+    LIMIT 1
      ) 
 IS NULL;
                     """.format(self.table_name,
