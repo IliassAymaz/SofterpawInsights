@@ -6,10 +6,7 @@ import traceback
 
 today = date.today()
 
-DATABASE_URL = os.environ['DATABASE_URL']
-connection = psycopg2.connect(DATABASE_URL, sslmode='require')
-# This is my database, what about future users database?
-cursor = connection.cursor()
+
 
 
 class Updater:
@@ -45,6 +42,10 @@ class Updater:
 
     def update(self):
         try:
+            DATABASE_URL = os.environ['DATABASE_URL']
+            connection = psycopg2.connect(DATABASE_URL, sslmode='require')
+            # This is my database, what about future users database?
+            cursor = connection.cursor()
             # This is my database, what about future users database?
             cursor = connection.cursor()
             # print database parameters
