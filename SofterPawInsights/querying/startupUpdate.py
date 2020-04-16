@@ -98,7 +98,7 @@ class Updater:
                     os.system(sysstring)
 
                     sqlQuery, _ = self.execute_query()
-                    print(sqlQuery)
+                    # print(sqlQuery)
                     cursor.execute(sqlQuery)
                     connection.commit()
                     return
