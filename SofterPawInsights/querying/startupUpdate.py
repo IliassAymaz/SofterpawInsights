@@ -85,6 +85,7 @@ class Updater:
                     last_local_date = result[0][1]
                 except IndexError:
                     last_local_date = ''
+                    print('Index error!')
 
 
 
@@ -92,6 +93,7 @@ class Updater:
 
                 else:
                     # populate everything
+                    print(datetime.today())
                     sysstring = "python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
                         '2019-01-18',
                         today.strftime("%Y-%m-%d"))
