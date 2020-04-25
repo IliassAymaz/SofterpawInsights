@@ -102,6 +102,7 @@ class Updater:
                     sqlQuery, _ = self.execute_query()
                     # print(sqlQuery)
                     cursor.execute(sqlQuery)
+                    print(sqlQuery)
                     connection.commit()
                     return
 
