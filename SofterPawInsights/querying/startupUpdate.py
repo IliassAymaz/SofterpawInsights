@@ -39,6 +39,7 @@ class Updater:
             (today - timedelta(days=4)).strftime("%Y-%m-%d"),
             today.strftime("%Y-%m-%d"))
         os.system(strstring)
+        print("strstring", strstring)
 
     def update(self):
         try:
@@ -108,7 +109,7 @@ class Updater:
                 _, last_date_upstream = self.execute_query()
 
                 if last_date_upstream != last_local_date:
-                    print(last_date_upstream)
+                    print("last_date_upstream", last_date_upstream)
                     self.handle_database_foot(last_local_date)
                     sqlQuery, _ = self.execute_query()
                     cursor.execute(sqlQuery)
