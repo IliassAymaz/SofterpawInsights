@@ -108,12 +108,13 @@ class Updater:
                 _, last_date_upstream = self.execute_query()
 
                 if last_date_upstream != last_local_date:
+                    print(last_date_upstream)
                     self.handle_database_foot(last_local_date)
                     sqlQuery, _ = self.execute_query()
                     cursor.execute(sqlQuery)
-                    print(sqlQuery[:-200])
                     # don't forget this sfb
                     connection.commit()
+                    # data is not collected from Google search console!!
                     print("Table created successfully.")
                 else:
                     print("The table is already up-to-date.")
