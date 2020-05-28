@@ -87,11 +87,8 @@ class Updater:
                     last_local_date = ''
                     print('Index error!')
 
-
-
-
-
-                else:
+                # hide this and check what happens
+                '''else:
                     # populate everything
                     print(datetime.today())
                     sysstring = "python3 ./SofterPawInsights/querying/search_analytics_api_sample.py 'https://softerpaw.com' {0} {1} ".format(
@@ -104,7 +101,7 @@ class Updater:
                     cursor.execute(sqlQuery)
                     print(sqlQuery[-200:])
                     connection.commit()
-                    return
+                    return'''
 
                 # get last element upstream
                 self.get_last_element_upstream()
