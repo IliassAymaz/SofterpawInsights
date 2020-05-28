@@ -111,10 +111,9 @@ class Updater:
                     self.handle_database_foot(last_local_date)
                     sqlQuery, _ = self.execute_query()
                     cursor.execute(sqlQuery)
-
+                    print(sqlQuery[:-200])
                     # don't forget this sfb
                     connection.commit()
-                    print('commited!')
                     print("Table created successfully.")
                 else:
                     print("The table is already up-to-date.")
