@@ -32,6 +32,7 @@ class Updater:
             "./SofterPawInsights/querying/data/data_Available dates.json",
             "performance")
         sqlQuery, last_date_upstream = Converter.convert()
+        print(sqlQuery[:100])
         return sqlQuery, last_date_upstream
 
     def get_last_element_upstream(self):
@@ -111,7 +112,6 @@ class Updater:
                 print('last_date_upstream', last_date_upstream)
 
                 if last_date_upstream != last_local_date:
-                    print("last_date_upstream", last_date_upstream)
                     self.handle_database_foot(last_local_date)
                     sqlQuery, _ = self.execute_query()
                     cursor.execute(sqlQuery)
