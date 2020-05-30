@@ -32,7 +32,7 @@ class Updater:
             "./SofterPawInsights/querying/data/data_Available dates.json",
             "performance")
         sqlQuery, last_date_upstream = Converter.convert()
-        print(sqlQuery[:-30])
+        print(sqlQuery[:-10])
         return sqlQuery, last_date_upstream
 
     def get_last_element_upstream(self):
