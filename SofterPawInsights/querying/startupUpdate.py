@@ -108,7 +108,7 @@ class Updater:
                 self.get_last_element_upstream()
 
                 _, last_date_upstream = self.execute_query()
-                print(last_date_upstream)
+                print('last_date_upstream', last_date_upstream)
 
                 if last_date_upstream != last_local_date:
                     print("last_date_upstream", last_date_upstream)
