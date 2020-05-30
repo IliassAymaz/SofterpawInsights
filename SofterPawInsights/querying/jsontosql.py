@@ -30,13 +30,6 @@ class JsontoSQLConverter():
             tmp = []
 
         # print(data)
-        """for row in data:
-            print(row)"""
-
-        """for i in range(len(data['rows'])):
-            print("----------------------")
-            for column in data['rows'][i]:
-                print(column, ": ", data['rows'][i][column])"""
 
         # well let's store these keys somewhere
         tablekeys = []
@@ -89,7 +82,6 @@ INSERT INTO tmp({2}) VALUES
         # alter table {0} add if not exists id serial not null primary key  ;
         # """.format(self.table_name)
 
-        import re
 
         for i in range(len(data['rows'])):
             sqlquery += """
@@ -115,6 +107,7 @@ IS NULL;
         sqlquery += """
 DROP TABLE tmp;
         """
+        print(data)
         return sqlquery, data['rows'][-1]['keys'][-1]
 
     def get_last_date(self):
