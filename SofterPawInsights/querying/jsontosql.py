@@ -107,7 +107,8 @@ IS NULL;
         sqlquery += """
 DROP TABLE tmp;
         """
-        print('data = ', data['rows'][-1]['keys'][-1])
+        print('data = ', data)
+        print('needed = ', data['rows'][-1]['keys'][-1])
         return sqlquery, data['rows'][-1]['keys'][-1]
 
     def get_last_date(self):
