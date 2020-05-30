@@ -70,8 +70,8 @@ def main(argv):
     }
     response = execute_request(service, flags.property_uri, request)
     print(response)
-    # don't print, for log purposes
-    # print_table(response, 'Available dates')
+
+    print_table(response, 'Available dates')
 
 
 def execute_request(service, property_uri, request):
@@ -98,7 +98,7 @@ def print_table(response, title):
     response: The server response to be printed as a table.
     title: The title of the table.
   """
-    print('\n --' + title + ':')
+    '''print('\n --' + title + ':')
 
     if 'rows' not in response:
         print('Empty response')
@@ -108,8 +108,6 @@ def print_table(response, title):
     row_format = '{:<20}' + '{:>20}' * 4
     print(row_format.format('Keys', 'Clicks', 'Impressions', 'CTR', 'Position'))
 
-    '''if not arguments.last_element:
-    list_of_keys = []'''
     for row in rows:
         keys = ''
 
@@ -117,10 +115,8 @@ def print_table(response, title):
         if 'keys' in row:
             keys = u','.join(row['keys']).encode('utf-8').decode()
         print(row_format.format(
-            keys, row['clicks'], row['impressions'], row['ctr'], row['position']))
-        '''if not arguments.last_element:
-      list_of_keys.append(keys)
-      return list_of_keys[-1]'''
+            keys, row['clicks'], row['impressions'], row['ctr'], row['position']))'''
+
 
     import json
     with open('./SofterPawInsights/querying/data/data_{}.json'.format(title), 'w') as f:
