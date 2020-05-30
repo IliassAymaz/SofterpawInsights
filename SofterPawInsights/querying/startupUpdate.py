@@ -39,7 +39,7 @@ class Updater:
             (today - timedelta(days=4)).strftime("%Y-%m-%d"),
             today.strftime("%Y-%m-%d"))
         os.system(strstring)
-        print("strstring", strstring)
+        print("strstring", strstring, today)
 
     def update(self):
         try:
@@ -106,7 +106,9 @@ class Updater:
 
                 # get last element upstream
                 self.get_last_element_upstream()
+
                 _, last_date_upstream = self.execute_query()
+                print(last_date_upstream)
 
                 if last_date_upstream != last_local_date:
                     print("last_date_upstream", last_date_upstream)
