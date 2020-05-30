@@ -40,7 +40,7 @@ class Updater:
             (today - timedelta(days=4)).strftime("%Y-%m-%d"),
             today.strftime("%Y-%m-%d"))
         os.system(strstring)
-        print("strstring", strstring, today)
+        print("strstring", strstring)
 
     def update(self):
         try:

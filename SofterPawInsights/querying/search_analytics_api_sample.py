@@ -125,7 +125,7 @@ def print_table(response, title):
     import json
     with open('./SofterPawInsights/querying/data/data_{}.json'.format(title), 'w') as f:
         json.dump(response, f, indent=2)
-
+    print(response)
 
 if __name__ == '__main__':
     main(sys.argv)
