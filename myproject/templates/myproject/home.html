@@ -1,6 +1,25 @@
+{% load static %}
+{% load extras %}
+<html>
+<head>
+    <meta name="google-site-verification" content="JenRw5wyE_cTqL7T2EeRo7LqhWh0PHWSVSTgw38pG1o" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static "SofterPawInsights/style.css" %}">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+            crossorigin="anonymous"></script>
+    <script src="{% static "SofterPawInsights/script.js" %}"></script>
+</head>
 <h1> Welcome to SofterpawIntel!</h1>
 
-This project combines :
+<div class="container">
+  <div class="row">
+        <div class="col" >
+
+        This project combines :
 <ul>
     <li>SofterpawInsights (google console API)</li>
     <ul>
@@ -43,3 +62,9 @@ We can build that as a "web app", full stack, and make it available to front end
 <h2><a href="/softerpawspider/" >SofterpawSpider</a></h2>
 
 We would like to see our own simple web crawler that pulls keywords that we need for our content to rank, using maching learning models.
+
+        </div>
+        </div>
+        </div>
+
+</html>

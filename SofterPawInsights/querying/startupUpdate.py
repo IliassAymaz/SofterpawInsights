@@ -11,7 +11,7 @@ today = date.today()
 
 class Updater:
     def __init__(self):
-        pass
+        self.message = ''
 
     def handle_database_head(self, result):
         # get entries up to the first date we have on the local database
@@ -119,6 +119,7 @@ class Updater:
                     print("Table created successfully.")
                 else:
                     print("The table is already up-to-date.")
+                    self.message = "The table is already up-to-date!"
 
             except (Exception, psycopg2.Error) as queryerror:
                 # print("Could not create table. \n", type(queryerror), ': ', queryerror)
@@ -134,3 +135,4 @@ class Updater:
                 cursor.close()
                 connection.close()
                 print("\nDatabase connection is closed.")
+                return self.message

@@ -3,107 +3,107 @@ from django.http import HttpResponse
 from django.template import loader
 from django.http import Http404
 from django.shortcuts import get_object_or_404
-
-
+from django.contrib import messages
 
 from .models import Criteria, Article, Performance
+
 
 # Create your views here.
 
 def index(request):
-	latest_criteria_list = Criteria.objects.order_by('-pub_date')[:4]
-	article_list = Article.objects.all()
-	# article_list = Article.objects.filter(article__criteria = )
+    latest_criteria_list = Criteria.objects.order_by('-pub_date')[:4]
+    article_list = Article.objects.all()
+    # article_list = Article.objects.filter(article__criteria = )
 
-	context = {
-			'latest_criteria_list': latest_criteria_list,
-			'article_list' : article_list,
-		}
+    context = {
+        'latest_criteria_list': latest_criteria_list,
+        'article_list': article_list,
+    }
 
-	# let's create an actual list that contains the articles that should be shown, 
-	# in the exact same order that should be in the index page.
+    # let's create an actual list that contains the articles that should be shown,
+    # in the exact same order that should be in the index page.
 
-	# I don't know how the fuck .objects.all() 'gets' the objects from the database
-	# so ama do my own selection.
+    # I don't know how the fuck .objects.all() 'gets' the objects from the database
+    # so ama do my own selection.
 
-	# let's make a dirty test
+    # let's make a dirty test
 
-	'''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
-		print(p.criteria_id, p.title)'''
+    '''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
+        print(p.criteria_id, p.title)'''
 
-
-
-	return render(request, 'SofterPawInsights/index.html', context)
+    return render(request, 'SofterPawInsights/index.html', context)
 
 
 def detail(request, criteria_id):
-	# this will get the actual object
-	criteria = get_object_or_404(Criteria, pk=criteria_id)
-	return render(request, 'SofterPawInsights/detail.html', {'criteria':criteria})
+    # this will get the actual object
+    criteria = get_object_or_404(Criteria, pk=criteria_id)
+    return render(request, 'SofterPawInsights/detail.html', {'criteria': criteria})
 
 
 def article(request, slug, criteria_id):
-	# variables in urls go here up, on function call
+    # variables in urls go here up, on function call
 
-	# this needs to conform to the html call
-	# article here is different from article in index.html
+    # this needs to conform to the html call
+    # article here is different from article in index.html
 
-	# this will get a *list* of objects!
-	article = Article.objects.filter(criteria__id=criteria_id, slug=slug)
-	print(criteria_id, article)
-	context = {
-		'article' : article,
-	}
-	return render(request, 'SofterPawInsights/article.html', context)
+    # this will get a *list* of objects!
+    article = Article.objects.filter(criteria__id=criteria_id, slug=slug)
+    print(criteria_id, article)
+    context = {
+        'article': article,
+    }
+    return render(request, 'SofterPawInsights/article.html', context)
+
 
 def simulation(request):
-	latest_criteria_list = Criteria.objects.order_by('-pub_date')[:4]
-	article_list = Article.objects.all()
-	# article_list = Article.objects.filter(article__criteria = )
+    latest_criteria_list = Criteria.objects.order_by('-pub_date')[:4]
+    article_list = Article.objects.all()
+    # article_list = Article.objects.filter(article__criteria = )
 
-	context = {
-			'latest_criteria_list': latest_criteria_list,
-			'article_list' : article_list,
-		}
+    context = {
+        'latest_criteria_list': latest_criteria_list,
+        'article_list': article_list,
+    }
 
-	# let's create an actual list that contains the articles that should be shown, 
-	# in the exact same order that should be in the index page.
+    # let's create an actual list that contains the articles that should be shown,
+    # in the exact same order that should be in the index page.
 
-	# I don't know how the fuck .objects.all() 'gets' the objects from the database
-	# so ama do my own selection.
+    # I don't know how the fuck .objects.all() 'gets' the objects from the database
+    # so ama do my own selection.
 
-	# let's make a dirty test
+    # let's make a dirty test
 
-	'''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
-		print(p.criteria_id, p.title)'''
+    '''for p in Article.objects.raw('select id, criteria_id, title from SofterPawInsights_article'):
+        print(p.criteria_id, p.title)'''
 
-
-
-	return render(request, 'SofterPawInsights/simulation.html', context)
-
+    return render(request, 'SofterPawInsights/simulation.html', context)
 
 
 def database(request):
-	
-	all_items = Performance.objects.order_by('keys')
-	all_fields = Performance._meta.get_fields()
-	context = {
-		'all_items' : all_items,
-		'all_fields': all_fields
-	}
+    all_items = Performance.objects.order_by('keys')
+    all_fields = Performance._meta.get_fields()
+    context = {
+        'all_items': all_items,
+        'all_fields': all_fields
+    }
 
-	from django.http import HttpResponseRedirect
-	from django.urls import reverse
-	if request.method == 'POST' and 'run_script' in request.POST:
+    from django.http import HttpResponseRedirect
+    from django.urls import reverse
+    if request.method == 'POST' and 'run_script' in request.POST:
 
-		# import function to run
-		from .querying.startupUpdate import Updater
+        # import function to run
+        from .querying.startupUpdate import Updater
 
-		# call function
-		_Updater = Updater()
-		_Updater.update() 
+        # call function
+        _Updater = Updater()
+        message = _Updater.update()
 
-		# return user to required page
-		return HttpResponseRedirect(reverse('SofterPawInsights:database'))
+        # if table is already up to date, print nice error message to user
+        if message != '':
+            messages.add_message(request, messages.INFO, message)
+            # context['error_message'] = message
 
-	return render(request, 'SofterPawInsights/db.html', context)
+        # return user to required page
+        return HttpResponseRedirect(reverse('SofterPawInsights:database'))
+
+    return render(request, 'SofterPawInsights/db.html', context)
