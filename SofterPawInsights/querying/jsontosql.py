@@ -100,9 +100,6 @@ IS NULL;
                                tablekeys[0],
                                str(data['rows'][i]['keys']).strip('[]'))
 
-        database = open("database.sql", "w")
-        database.write(sqlquery)
-
         # and delete the tmp table
         sqlquery += """
 DROP TABLE tmp;
